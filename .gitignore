@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+
+# Private / raw logs
+*.raw.txt
+*private*
+*unsanitized*
+*secrets*
+*serial*
+*imei*
+*mac-addresses*
+
+# Firmware / OS images / large binary blobs
+*.img
+*.bin
+*.zip
+*.tar
+*.tar.gz
+*.xz
+*.7z
+*.iso
+
+# Tool clutter
+*.log
