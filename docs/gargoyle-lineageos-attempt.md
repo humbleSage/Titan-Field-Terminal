@@ -124,6 +124,17 @@ Next test:
 - Configure Termux extra keys row.
 - Decide whether this is good enough for field-terminal workflows.
 
+## Navigation Bar / Screen Space
+
+The Android soft navigation bar was removed by switching the system navigation mode to gesture navigation:
+
+`Settings → System → Gestures → System navigation → Gesture navigation`
+
+Result:
+- Home/back/recent soft buttons are no longer occupying screen space.
+- This is acceptable because the Titan hardware keyboard provides navigation controls.
+- Termux now has more usable vertical space for terminal work.
+
 ## Current Result
 
 Gargoyle / LineageOS boots.
