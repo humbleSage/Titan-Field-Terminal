@@ -90,3 +90,31 @@ Result:
 
 - userdata.img: 6.7G
 - file userdata.img: Linux rev 1.0 ext4 filesystem data
+
+## Fastboot raw userdata flash failure on macOS
+
+Attempted to flash raw ext4 `userdata.img` from macOS using Android Platform Tools fastboot.
+
+Results:
+
+```bash
+fastboot flash userdata userdata.img
+fastboot flash userdata ./userdata.img
+```
+
+Both failed with:
+
+`fastboot: error: Failed reading from userdata`
+
+Rebuilt a smaller ext4 image:
+
+`mke2fs -t ext4 -b 4096 -O '^metadata_csum' -m 0 -d userdata userdata.img 1000000`
+
+Resulting image:
+
+- userdata.img: 3.8G
+- ext4 filesystem detected by file
+
+Flashing still failed with the same fastboot read error.
+
+Next step: use Linux laptop and img2simg from android-sdk-libsparse-utils to convert userdata.img to Android sparse format, then flash userdata.sparse.img.

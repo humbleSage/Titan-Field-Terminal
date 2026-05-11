@@ -64,13 +64,42 @@ The graphical UBports Installer path is not currently viable for this Titan. Nex
 ### Status
 Blocked at installer database/device-profile stage. Device remains bootable and controllable.
 
-## Result
-- Boots:
-- Wi-Fi:
-- Keyboard:
-- Terminal:
-- Charging:
-- Sleep/wake:
-- Notes:
+## First Breath
 
-## Verdict
+### Result
+Ubuntu Touch booted successfully on the original Unihertz Titan.
+
+### Notes
+- Device reached Ubuntu Touch setup.
+- Setup screens appear scaled for a more conventional phone display.
+- Some setup UI elements do not adapt cleanly to the Titan screen dimensions.
+- Some keyboard input is inconsistent or not accepted in parts of setup.
+- The Titan was already an unusual Android phone, so some ergonomic weirdness is expected.
+
+### Verdict
+First breath achieved. Ubuntu Touch manual install path is viable enough to continue testing.
+
+## Keyboard Quirks
+
+- Test English layout vs Unihertz layout
+- Identify which keys work
+- Identify broken modifiers/symbols
+- Determine whether keyboard-as-navigation/touchpad exists in Ubuntu Touch
+- If needed, inspect `/dev/input` events and keymaps
+
+## Keyboard Blocker
+
+Ubuntu Touch booted, but the physical keyboard behavior makes the device impractical as a field terminal.
+
+Observed:
+- Keyboard behavior is inconsistent/quirky.
+- The issue appears deeper than a language/layout setting.
+- Switching keyboard/input layout did not resolve it.
+- The old Android build had a Unihertz-specific keyboard/navigation feature that could be disabled.
+- Ubuntu Touch does not appear to expose an equivalent control during initial testing.
+
+Interpretation:
+The device likely exposes vendor-specific physical keyboard / touch-navigation behavior that Ubuntu Touch does not handle cleanly. The port boots, but the Titan is not currently usable as a practical field terminal under Ubuntu Touch.
+
+Verdict:
+Ubuntu Touch is technically viable enough to boot, but not functionally viable for this project without deeper input-driver/keymap work.

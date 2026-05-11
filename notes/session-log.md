@@ -47,3 +47,19 @@ After-unlock fastboot log captured locally at:
 
 ### Next
 Prepare for Ubuntu Touch / UBports install attempt.
+
+## Session 003 - Ubuntu Touch First Breath
+
+### Goal
+Flash the manual Ubuntu Touch community-port images and determine whether the Titan can boot.
+
+### Result
+Success. The Titan booted into Ubuntu Touch setup.
+
+### Quirks Observed
+- Setup UI is not well adapted to Titan screen dimensions.
+- Some keyboard input does not work consistently during setup.
+- UI appears scaled for a conventional phone.
+
+### Status
+First breath achieved.
