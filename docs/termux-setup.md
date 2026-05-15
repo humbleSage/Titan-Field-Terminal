@@ -27,6 +27,31 @@ pkg upgrade
 pkg install openssh git tmux nano vim python rsync curl wget jq
 ```
 
+## Installed package set
+
+Core field-terminal packages:
+
+```bash
+pkg install openssh git tmux nano vim python rsync curl wget jq htop tree ripgrep fd unzip zip tar gzip xz-utils less man termux-tools
+```
+
+Small development/debug packages:
+
+`pkg install clang make cmake pkg-config gdb lldb`
+
+Network/debug packages:
+
+`pkg install dnsutils iproute2 net-tools nmap openssl`
+
+Optional:
+
+`pkg install nnn gh`
+
+Intent:
+
+This package set is meant to make the Titan useful as a pocket field terminal: SSH, Git, notes, scripts, network checks, small C/Python experiments, and robot/system troubleshooting. Heavy GUI work, ROS 2 development, embedded firmware workflows, CAD, and full IDE workflows remain laptop tasks.
+
+
 ## Current Verdict
 
 Keyboard and screen usability are good enough to proceed to SSH and field workflow testing. Customization will probably be an ongoing process.

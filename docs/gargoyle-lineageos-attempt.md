@@ -135,6 +135,51 @@ Result:
 - This is acceptable because the Titan hardware keyboard provides navigation controls.
 - Termux now has more usable vertical space for terminal work.
 
+## Google Play decision
+
+Google Play is being added pragmatically, not as a daily-driver feature.
+
+Reason:
+- Needed for ChatGPT Android app.
+- Needed for robot vendor apps.
+- Some apps expect Play Services.
+
+Policy:
+- Keep Termux from F-Droid/GitHub.
+- Keep Play-installed apps limited to robot/field-terminal needs.
+- Avoid turning the Titan into a general phone.
+
+## Google Play / GMS Lesson
+
+Initial confusion:
+I treated Google Play as if it were just an app APK.
+
+Actual issue:
+Google Play depends on a connected Google Mobile Services stack, including background services and frameworks. Installing only the Play Store APK is not enough on a vanilla custom ROM.
+
+Interpretation:
+This is closer to adding an Apple-style background services ecosystem than installing a normal standalone app.
+
+Current decision:
+Use a known GApps/Magisk/module-based path rather than chasing individual APKs across the internet.
+
+## Google Play / GMS Status
+
+Goal:
+Add limited Google Play access for ChatGPT and robot vendor apps.
+
+Result:
+Google Play / GMS installation appears to work after flashing/installing the chosen module/path and rebooting.
+
+Current status:
+- Device boots: yes
+- Google services appear functional: yes
+- Play Store appears functional: yes
+- Further app testing needed: ChatGPT, Wave Rover/Waveshare apps, HiWonder/MiniAuto apps
+
+Policy:
+Google Play is installed as field-terminal infrastructure, not as a daily-driver app ecosystem.
+
 ## Current Result
 
 Gargoyle / LineageOS boots.
